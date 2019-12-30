@@ -1,0 +1,8 @@
+#!/bin/sh
+ssh root@192.168.4.182 <<EOF
+ cd /var/www/node-app-4jk
+ git pull
+ npm install — production
+ pm2 restart all
+ exit
+EOF
